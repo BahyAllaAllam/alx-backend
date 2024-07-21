@@ -52,7 +52,7 @@ class Server:
 
         indexed_data = self.indexed_dataset()
         data = []
-        current_index = index
+        current_index = index if index else 0
         while len(data) < page_size and current_index < len(indexed_data):
             if current_index in indexed_data:
                 data.append(indexed_data[current_index])
