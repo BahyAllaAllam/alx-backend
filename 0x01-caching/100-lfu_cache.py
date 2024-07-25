@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+""" LFUCache module
+"""
+
 from base_caching import BaseCaching
 from collections import defaultdict, OrderedDict
 
