@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-""" LFUCache module
-"""
 from base_caching import BaseCaching
 from collections import defaultdict, OrderedDict
 
@@ -31,7 +28,7 @@ class LFUCache(BaseCaching):
                 lfu_keys = []
                 for k, freq in self.frequency.items():
                     if freq == min_freq:
-                        lfu_keys.appen(k)
+                        lfu_keys.append(k)
 
                 if len(lfu_keys) > 1:
                     for k in self.access_order:
